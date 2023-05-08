@@ -1,7 +1,7 @@
 import os
 from PIL import Image, ImageGrab
 import numpy as np
-
+import sys
 # Get the directory containing the script file
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -24,8 +24,13 @@ for filename in os.listdir(block_dir):
             color = tuple(np.array(rgb_im).mean(axis=(0,1)).astype(int))
             block_colors[block_name] = color
 
-# Get the image from the clipboard
-im = ImageGrab.grabclipboard()
+if len(sys.argv) > 1:
+    # Get the image from the command-line argument
+    im = Image.open(sys.argv[1])
+else:
+    # Get the image from the clipboard
+    from PIL import ImageGrab
+    im = ImageGrab.grabclipboard()
 
 # Convert the image to RGB if necessary
 if im.mode != 'RGB':
