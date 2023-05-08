@@ -1,4 +1,4 @@
-
+![Logo](https://user-images.githubusercontent.com/6944124/236837865-4614433a-e445-45fa-bab6-2050df4462b1.png)
 # MCPalette
 MCPalette is a Python-based platform that helps Minecraft players find the best matching block for a given color palette. The platform uses image processing and machine learning algorithms to analyze the colors of Minecraft block textures and match them with the colors in the input palette. MCPalette is especially useful for players who want to design their Minecraft worlds with a specific color scheme or theme, but have trouble finding the right blocks.
 
